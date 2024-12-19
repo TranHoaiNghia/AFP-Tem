@@ -1,0 +1,203 @@
+/* Định nghĩa kiểu khi in */
+@media print {
+    @page {
+        size: A4; /* Kích thước giấy A4 */
+        margin: 10mm; /* Lề trang */
+    }
+
+    /* Các phần tử phải hiển thị đúng khi in */
+    .footer .finish {
+        -webkit-print-color-adjust: exact; /* Đảm bảo màu nền được in */
+        width: 100%; /* Điều chỉnh lại width để không bị tràn ngoài */
+        height: 15px;
+        margin-top: 80px;
+        background-color: #4472c4;
+        position: relative;
+        left: 0; /* Xóa left: -60px để phần tử không bị cắt */
+    }
+
+    /* Kiểm tra kiểu chữ, kích thước cho phù hợp khi in */
+    body {
+        font-size: 12px; /* Đặt kích thước font nhỏ hơn khi in */
+        background-color: white; /* Đảm bảo không có màu nền khi in */
+    }
+
+    .container {
+        width: 100%; /* Đảm bảo phần tử container rộng hết trang */
+        padding: 20px;
+        background-color: #fff;
+    }
+
+    .header_info img {
+        height: 100px; /* Điều chỉnh kích thước ảnh cho vừa trang A4 */
+    }
+
+    .header_info ul {
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    .footer_info {
+        font-size: 12px; /* Điều chỉnh kích thước chữ trong footer */
+    }
+
+    /* Giảm khoảng cách và căn chỉnh cho các phần tử */
+    .mar-tb {
+        margin: 5px 0;
+    }
+
+    .con-mid h1 {
+        font-size: 20px; /* Giảm kích thước tiêu đề */
+        margin-top: 30px;
+    }
+
+    .work-flow {
+        font-size: 12px;
+    }
+
+    .footer h1 {
+        font-size: 14px; /* Điều chỉnh kích thước chữ footer */
+        margin: 0;
+        text-align: center;
+    }
+}
+
+/* CSS chung cho trang */
+html {
+    font-size: 17px;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #000; /* Đảm bảo nền trắng khi in */
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* CSS chung cho các phần tử khác */
+.mar-tb {
+    margin: 10px 0;
+}
+
+.bold_und {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.red-weight {
+    color: red;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.black-weight {
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.work-flow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flow :nth-child(1) {
+    font-weight: bold;
+}
+
+.flow :nth-child(2) {
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.flow :nth-child(3) {
+    font-weight: bold;
+}
+
+.flow :nth-child(4) {
+    margin-top: 30px;
+}
+
+.container {
+    width: 803px;
+    margin: 0 auto;
+    padding: 60px 60px 20px 60px;
+    background-color: #fff;
+}
+
+.header_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.header_info img {
+    height: 120px;
+    margin-left: -26px;
+}
+
+.header_info ul {
+    list-style-type: none;
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    position: relative;
+    top: -10px;
+    right: -125px;
+}
+
+.header_info p {
+    font-weight: 700;
+    font-size: 12px;
+    position: relative;
+    top: -20px;
+}
+
+.header_number_date p {
+    font-size: 15px;
+    margin: 5px 0 0;
+}
+
+.header_number_date h5 {
+    font-size: 19px;
+    font-style: italic;
+    text-align: right;
+    margin: 0;
+    font-weight: normal;
+}
+
+.con-mid h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+.footer .finish {
+    width: 100%; /* Sửa lại width */
+    height: 15px;
+    margin-top: 80px;
+    background-color: #4472c4;
+    position: relative;
+    left: 0; /* Sửa lại để không bị dịch ra ngoài */
+}
+
+.footer h1 {
+    font-size: 17px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+}
+
+.footer_info {
+    text-align: center;
+}
